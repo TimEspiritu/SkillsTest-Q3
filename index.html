@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-box{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.center{
+    text-align: center;
+}
+
+.form-control{
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-info{
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-secondary{
+    background: gray;
+    color: white;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="register-box">
+
+<h1 class="center">Registration</h1>
+
+<p class="center">
+Please fill out all required fields to create your account.
+</p>
+
+<h2>Personal Information</h2>
+
+<input class="form-control" type="text" id="fname" placeholder="First Name">
+
+<input class="form-control" type="text" id="lname" placeholder="Last Name">
+
+<input class="form-control" type="text" id="contact" placeholder="Phone Number">
+
+<input class="form-control" type="email" id="email" placeholder="Email">
+
+<input class="form-control" type="text" id="username" placeholder="Username">
+
+<input class="form-control" type="password" id="password" placeholder="Password">
+
+<label>
+<input type="checkbox"> I accept the Terms and Conditions
+</label>
+
+<br><br>
+
+<button class="btn-info" onclick="createAccount()">Create my account</button>
+
+<br><br>
+
+<button class="btn-secondary" onclick="cancelRegistration()">Cancel</button>
+
+</div>
+
+<script>
+
+function createAccount(){
+
+let firstName = document.getElementById("fname").value;
+let lastName = document.getElementById("lname").value;
+let userName = document.getElementById("username").value;
+
+let message = "Welcome " + firstName + " " + lastName + "!\nUsername: " + userName;
+
+alert(message);
+
+}
+
+function cancelRegistration(){
+alert("Registration cancelled");
+}
+
+</script>
+
+</body>
+</html>
